@@ -95,10 +95,10 @@ export const infoPages = {
   },
   contact: {
     title: "Contact ToolNest",
-    description: "There is no monitored contact address or contact form configured for ToolNest at this time.",
-    notice: "Contact is not available yet. The site owner should add a real, monitored email address or support channel before inviting questions or feedback.",
+    description: "For tool support, feedback, general questions or privacy enquiries, email ToolNest.",
+    email: "officialcontact.toolnest@gmail.com",
     sections: [
-      ["Contact availability", "This page cannot currently receive messages because no support inbox or contact service is configured. The site owner should add and monitor a real email address or support destination here before asking visitors to send questions or feedback."],
+      ["What you can contact us about", "Email us about tool-related problems and bug reports, suggestions and feature requests, general questions and feedback, or privacy-related enquiries."],
     ],
   },
   privacy: {
@@ -111,7 +111,7 @@ export const infoPages = {
       ["Cookies and browser storage", "The current application code does not intentionally read or set cookies, localStorage or sessionStorage. It does use temporary in-memory page state and object URLs for previews and downloads. Hosting infrastructure or browser behavior may differ from the application code and should be checked in the final deployment."],
       ["Analytics and advertising", "No analytics service, advertising network or Google AdSense code is currently integrated. If advertising such as AdSense is added later, it may involve third-party requests, cookies or similar identifiers. The site owner should update this policy and review any applicable notice or consent requirements before enabling it."],
       ["Libraries and other services", "The application bundles Next.js and React for the website, Lucide React for icons, pdf-lib and PDF.js for PDF operations, and browser-compatible JSquash JPEG, WebP and OxiPNG codecs for image processing. These libraries execute in the browser; the PDF.js worker and codec assets are served from the ToolNest deployment. No external file-conversion API or third-party processing endpoint is configured. The structured-data context URL is metadata and is not fetched by the page."],
-      ["Privacy questions", "A monitored privacy contact channel has not been configured. The site owner should publish a working contact method on the Contact page before inviting privacy requests. No unmonitored or invented address is provided here."],
+      ["Privacy questions", "For privacy-related enquiries, email officialcontact.toolnest@gmail.com using the address on the Contact page."],
     ],
   },
   terms: {
