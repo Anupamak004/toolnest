@@ -9,6 +9,9 @@ export const metadata = {
   description: "Free browser-based tools for images, PDFs and text. Process files on your device with no account required.",
   alternates: { canonical: "/" },
   icons: { icon: "/favicon.svg" },
+  verification: {
+    google: "o73Px4W-7T57QBuTPi7yFmI9sN_9SNlnR_WB_QkVDMQ",
+  },
   openGraph: { title: "ToolNest — Free tools for everything you do", description: "Free browser-based tools for images, PDFs and text.", siteName: "ToolNest", url: "/", type: "website", locale: "en_US" },
 };
 
