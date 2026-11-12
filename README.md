@@ -2,7 +2,7 @@
 
 A responsive Next.js App Router foundation for a free online tools catalog.
 
-## Run locally
+## To Run locally
 
 ```bash
 npm install

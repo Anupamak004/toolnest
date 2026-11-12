@@ -81,6 +81,8 @@ button, input { font: inherit; }
 .info-content section { margin:0 0 26px; }
 .info-content h2 { margin:0 0 7px; color:var(--ink); font-size:20px; line-height:1.35; letter-spacing:-.025em; }
 .info-content p { margin:0; max-width:760px; }
+.privacy-resource-list { display:grid; gap:10px; margin:12px 0 0; padding-left:22px; }
+.privacy-resource-list a { color:var(--blue); text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere; }
 .contact-email-card { display:flex; flex-wrap:wrap; align-items:center; gap:16px; width:fit-content; max-width:100%; margin-top:24px; border:1px solid var(--line); border-radius:14px; padding:16px 18px; background:#fff; }
 .contact-email { color:var(--ink); font-size:clamp(16px,2.5vw,20px); font-weight:650; overflow-wrap:anywhere; text-decoration:underline; text-decoration-color:#b8c9e6; text-underline-offset:4px; }
 .contact-email:hover { color:var(--blue); text-decoration-color:currentColor; }
