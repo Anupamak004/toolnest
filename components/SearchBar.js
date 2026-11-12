@@ -3,11 +3,12 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Search } from "lucide-react";
 import { tools, categories } from "../data/tools";
+import { filterTools } from "../lib/tool-search.mjs";
 
 export default function SearchBar() {
   const [query, setQuery] = useState("");
   const inputRef = useRef(null);
-  const matches = useMemo(() => query.trim() ? tools.filter(tool => `${tool.name} ${tool.description} ${tool.category}`.toLowerCase().includes(query.toLowerCase())).slice(0, 5) : [], [query]);
+  const matches = useMemo(() => query.trim() ? filterTools(tools, query).slice(0, 5) : [], [query]);
   useEffect(() => { const onKeyDown = event => { if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") { event.preventDefault(); inputRef.current?.focus(); } }; window.addEventListener("keydown", onKeyDown); return () => window.removeEventListener("keydown", onKeyDown); }, []);
   return <div className="search-wrap">
     <label className="search-box"><Search size={19} aria-hidden="true" /><span className="sr-only">Search tools</span><input ref={inputRef} value={query} onChange={e => setQuery(e.target.value)} onKeyDown={e => { if (e.key === "Escape") setQuery(""); }} placeholder="What would you like to do?" aria-label="Search tools" aria-autocomplete="list" aria-expanded={matches.length > 0} aria-controls="tool-search-results" /><kbd className="search-shortcut">Ctrl K</kbd></label>

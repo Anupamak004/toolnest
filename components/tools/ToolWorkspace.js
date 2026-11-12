@@ -30,6 +30,8 @@ export default function ToolWorkspace({ tool, category }) {
       <section><h2>When it helps</h2><p>{content.uses}</p></section>
       <section><h2>Frequently asked questions</h2>{content.faqs.map(([question,answer])=><div className="tool-faq" key={question}><h3>{question}</h3><p>{answer}</p></div>)}</section>
       <section><h2>Related tools</h2><ul className="related-tools">{content.related.map(slug=>{const related=getTool(slug);return related&&<li key={slug}><Link href={`/tools/${related.category}/${slug}`}>{related.name} →</Link></li>;})}</ul></section>
+      {content.guide&&<section><h2>Related guide</h2><p><Link href={content.guide[0]}>{content.guide[1]} →</Link></p></section>}
+      {content.relatedGuides?.length>0&&<section><h2>Related guides</h2><ul className="related-tools">{content.relatedGuides.map(([href,label])=><li key={href}><Link href={href}>{label} →</Link></li>)}</ul></section>}
     </article>}
     <Link className="back-link" href={`/tools/${category.slug}`}>← All {category.name.toLowerCase()}</Link>
   </div>;

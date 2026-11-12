@@ -16,7 +16,9 @@ export default async function GuidePage({params}) {
     <span className="eyebrow">{guide.tag}</span><h1>{guide.title}</h1><p className="guide-intro">{guide.intro}</p>
     <div className="guide-body">{guide.steps ? <><h2>Steps to follow</h2><ol>{guide.steps.map(([title,body],index)=><li key={title}><h3>{index+1}. {title}</h3><p>{body}</p></li>)}</ol>
       <section><h2>Example</h2><p>{guide.example}</p></section><section><h2>Limits to keep in mind</h2><p>{guide.limitations}</p></section></> : guide.sections.map(([title,body])=><section key={title}><h2>{title}</h2><p>{body}</p></section>)}
+      {guide.examples?.map(example=><section key={example.title}><h2>{example.title}</h2><p>{example.description}</p><pre className="guide-code"><code>{example.code}</code></pre></section>)}
       {guide.tool && <section className="guide-tool-link"><h2>Try the related tool</h2><p>Use ToolNest to complete this task in your browser.</p><Link className="cat-link" href={guide.tool[0]}>{guide.tool[1]} →</Link></section>}
+      {guide.relatedTools?.length>0&&<section className="guide-tool-link"><h2>Related tools</h2><ul className="related-tools">{guide.relatedTools.map(([href,label])=><li key={href}><Link href={href}>{label} →</Link></li>)}</ul></section>}
     </div>
   </article>;
 }
